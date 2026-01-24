@@ -1,0 +1,38 @@
+:Author: vladislavvanyuk
+:Email: vladislavvanyuk@gmail.com
+:Date: 15/01/2024
+:Revision: version#
+:License: Public Domain
+:repository-name: LiquidCrystal
+
+= {repository-name} Base Class =
+
+This library allows an Arduino board to control liquid crystal displays (LCDs) based on the Hitachi HD44780 (or a compatible) chipset, which is found on most text-based LCDs.
+Virtual base class for (LCDs) devices, allows you to use one library for LiquidCrystal displays and LiquidCrystal_I2C displays as objects of child classes.
+Allows you to create general LCD object and use same methods for different derived classes.
+
+TIP: To find the latest versions, refer to https://github.com/VladVanyuk/LiquidCrystal_Base[this link].
+TIP: Online library showcase: https://wokwi.com/projects/385498212006391809[Wokwi Simulation].
+
+== Class hierarchy structure:
+....
+ LiquidCrystal_Base       => Base virtual(abstact) class. Has methods for all derived classes.
+  ├── LiquidCrystal       => Implementation of standart Arduino LCD library as derived class
+  └── LiquidCrystal_I2C   => Implementation of I2C LCD library as derived class
+....
+
+== Based on libaries: 
+
+* https://github.com/arduino-libraries/LiquidCrystal[LiquidCrystal library]
+
+* https://github.com/johnrickman/LiquidCrystal_I2C[LiquidCrystal_I2C library]
+
+* Added https://github.com/MartyMacGyver/Arduino_I2C_Scanner/tree/masterp[I2C_scanner] in examples
+
+* Added https://github.com/mrkaleArduinoLib/LiquidCrystal_I2C/tree/master[Complete Test] in examples. Also added readme file. 
+
+=== License
+This project is released under a {License} License.
+
+=== Contributor
+https://github.com/VladVanyuk[Vladislav Vanyuk]
