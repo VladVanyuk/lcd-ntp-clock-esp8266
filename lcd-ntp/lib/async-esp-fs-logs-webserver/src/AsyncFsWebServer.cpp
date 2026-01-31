@@ -641,10 +641,11 @@ bool AsyncFsWebServer::startWiFi(uint32_t timeout, CallbackF fn) {
 
         // Will try for some time
         int tryDelay = timeout / 10;
-        int numberOfTries = 10;
+        int numberOfTries = 60;
 
         // Wait for the WiFi event
         while (true) {
+            log_debug("Connecting to %s, %s", _ssid, _pass);
             switch (WiFi.status()) {
             case WL_NO_SSID_AVAIL:   log_debug("[WiFi] SSID not found"); break;
             case WL_CONNECTION_LOST: log_debug("[WiFi] Connection was lost"); break;
